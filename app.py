@@ -61,8 +61,11 @@ app = Flask(__name__)
 #line_bot_api = LineBotApi('wbeBaLPb7xIuGymdaHU9yHy300QZ383XYgewhXLSoRe3TnlWo1xQuypNFpis1ExGrSTV1WpmtmQEiaR9tRPQHFUspwI9rVk2Ajfrg1WUwFpV9ewvq/vDx9LItfeNW+9y6Ih/OcwNpJPB/UfE9afIFwdB04t89/1O/w1cDnyilFU=') # Channel Access Token DCS-BOT
 #handler = WebhookHandler('49a9d31e3b8135ee7f85e6bc78848baa') # Channel Secret DCS-BOT
 
-line_bot_api = LineBotApi('CFaQZEnotjzhRjT4JMbcMyA0cksM4HE9Zu7HA8xQdWVbOMh6HLdeiCp2NKv6gmjNmJHs+NhWvnk8DYUZ3r8mCX6goDgYby/EV9s+/2mR9piHnPUVUGzWhRlmWw5K8RQG8iwgtSPnw89zEaUILnhtMwdB04t89/1O/w1cDnyilFU=') # Channel Access Token Report
-handler = WebhookHandler('f1e03e9bb185204d4494a1cce993970a') # Channel Secret Report
+#line_bot_api = LineBotApi('CFaQZEnotjzhRjT4JMbcMyA0cksM4HE9Zu7HA8xQdWVbOMh6HLdeiCp2NKv6gmjNmJHs+NhWvnk8DYUZ3r8mCX6goDgYby/EV9s+/2mR9piHnPUVUGzWhRlmWw5K8RQG8iwgtSPnw89zEaUILnhtMwdB04t89/1O/w1cDnyilFU=') # Channel Access Token Report
+#handler = WebhookHandler('f1e03e9bb185204d4494a1cce993970a') # Channel Secret Report
+
+line_bot_api = LineBotApi('MrPMR5mi0iXqaiXvApwsHkUYiD12Jt5xmALNZjsA+QJh7Gq0u0IlFxMNMk3H/xLg3NcjsmY7v3iZ5i1qY/W53C5HHTMPDVnel2/HV20yNt7e0mA82sXGrNy0cK1NBpWKlYylBMjRLze6+5QZg4/ycgdB04t89/1O/w1cDnyilFU=') # Channel Access Token Report
+handler = WebhookHandler('34c084ba808eeda97285ebe7ebf724ce') # Channel Secret Report
 #end Token
 
 # for test route
