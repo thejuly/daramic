@@ -25,6 +25,7 @@ from linebot.exceptions import LineBotApiError
 from tinydb import TinyDB, Query
 # end import module
 
+db = TinyDB('db.json')
 a = db.all()
 
 ####google sheet####
