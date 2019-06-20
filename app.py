@@ -87,11 +87,6 @@ def profile(name):
     return '<h2>Tuna is good %s</h2>' % a
     #return '<h2>Tuna is good %s</h2>' % name
 
-@app.route('/insert/<name>')
-def profile(name):
-    a = str(db.search(item.type == name))
-    return '<h2>Tuna is good %s</h2>' % a    
-
 ########################### Line API ###############
 @handler.default()
 def default(event):
