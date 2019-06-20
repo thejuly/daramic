@@ -83,7 +83,9 @@ def tuna():
 
 @app.route('/profile/<user>')
 def profile(user):
-    return '<h2>Tuna is good %s</h2>' % user
+    a = str(db.search(item.type == user))
+    return '<h2>Tuna is good %s</h2>' % a
+    #return '<h2>Tuna is good %s</h2>' % user
 
 @app.route('/post/<int:post_id>')
 def post(post_id):
@@ -95,23 +97,6 @@ def temp():
     sendMessage = 'Temp report in period'
     sendText(userThongpoon,sendMessage)
     return '',200
-
-
-
-########################## TinyDb #################
-@app.route('/searchx/<name>')
-def profile(name):
-    a = str(db.search(item.type == name))
-    return '<h2>Tuna is good %s</h2>' % a
-
-########################## TinyDb #################    
-
-
-
-
-
-
-
 
 @app.route('/serv')
 def serv():
