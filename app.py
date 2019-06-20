@@ -54,10 +54,7 @@ except:
     print 'cannot connect'
 '''
 
-########################## TinyDb #################
-db = TinyDB('db.json')
-item = Query()
-########################## TinyDb #################
+
 
 app = Flask(__name__)
 #line_bot_api = LineBotApi('wbeBaLPb7xIuGymdaHU9yHy300QZ383XYgewhXLSoRe3TnlWo1xQuypNFpis1ExGrSTV1WpmtmQEiaR9tRPQHFUspwI9rVk2Ajfrg1WUwFpV9ewvq/vDx9LItfeNW+9y6Ih/OcwNpJPB/UfE9afIFwdB04t89/1O/w1cDnyilFU=') # Channel Access Token DCS-BOT
@@ -81,14 +78,7 @@ def tuna():
     return '<h2>Tuna is good</h2>'
 
 
-########################## TinyDb #################
-@app.route('/query/<item_name>')
-def profile(item_name):
-    a = str(db.search(item.type == item_name))
-    return  a
 
-
-########################## TinyDb #################    
 
 
 @app.route('/profile/<user>')
