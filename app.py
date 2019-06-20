@@ -21,6 +21,8 @@ from linebot.models import *
 
 from linebot import LineBotApi
 from linebot.exceptions import LineBotApiError
+
+from tinydb import TinyDB, Query
 # end import module
 
 
