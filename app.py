@@ -80,9 +80,25 @@ def hello():
 def tuna():
     return '<h2>Tuna is good</h2>'
 
-@app.route('/db')
-def db():
+
+########################## TinyDb #################
+@app.route('/all_db')
+def all_db():
     return db.all()
+
+@app.route('/ins_db')
+def ins_db():
+    db.insert({'type': 'peach', 'count': 3})
+
+@app.route('/del_db')
+def del_db():
+    db.purge()    
+
+@app.route('/create_db')
+def create_db():
+    db = TinyDB('db.json')
+########################## TinyDb #################    
+
 
 @app.route('/profile/<user>')
 def profile(user):
