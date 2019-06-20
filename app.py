@@ -84,7 +84,7 @@ def tuna():
 @app.route('/profile/<user>')
 def profile(user):
     a = str(db.search(item.type == user))
-    return '<h2>Tuna is good %s</h2>' % user
+    return '<h2>Tuna is good %s</h2>' % a
 
 @app.route('/post/<int:post_id>')
 def post(post_id):
