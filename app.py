@@ -43,6 +43,10 @@ cell = sheet.cell(2,2).value  # Get the value of a specific cell
 ####google sheet####
 
 
+########################## TinyDb #################
+db = TinyDB('db.json')
+item = Query()
+########################## TinyDb #################
 
 
 '''
