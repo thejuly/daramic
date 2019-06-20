@@ -80,13 +80,13 @@ def hello():
 @app.route('/tuna')
 def tuna():
     return '<h2>Tuna is good</h2>'
-
+'''
 @app.route('/profile/<user>')
 def profile(user):
     a = str(db.search(item.type == user))
     return '<h2>Tuna is good %s</h2>' % a
     #return '<h2>Tuna is good %s</h2>' % user
-
+'''
 @app.route('/profilex/<userx>')
 def profile(userx):
     a = str(db.search(item.type == userx))
