@@ -87,7 +87,7 @@ def profile(user):
     return '<h2>Tuna is good %s</h2>' % a
     #return '<h2>Tuna is good %s</h2>' % user
 
-@app.route('/profile/<userx>')
+@app.route('/profilex/<userx>')
 def profile(userx):
     a = str(db.search(item.type == userx))
     return '<h2>Tuna is good %s</h2>' % a
