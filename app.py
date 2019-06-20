@@ -81,10 +81,6 @@ def hello():
 def tuna():
     return '<h2>Tuna is good</h2>'
 
-
-
-
-
 @app.route('/profile/<user>')
 def profile(user):
     return '<h2>Tuna is good %s</h2>' % user
@@ -99,6 +95,23 @@ def temp():
     sendMessage = 'Temp report in period'
     sendText(userThongpoon,sendMessage)
     return '',200
+
+
+
+
+
+
+@app.route('/query/<item_name>')
+def profile(item_name):
+    a = str(db.search(item.type == item_name))
+    return  a
+
+
+
+
+
+
+
 
 @app.route('/serv')
 def serv():
