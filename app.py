@@ -54,11 +54,10 @@ except:
     print 'cannot connect'
 '''
 
-global a
+########################## TinyDb #################
 db = TinyDB('db.json')
-a = db.all()
-
-
+item = Query()
+########################## TinyDb #################
 
 app = Flask(__name__)
 #line_bot_api = LineBotApi('wbeBaLPb7xIuGymdaHU9yHy300QZ383XYgewhXLSoRe3TnlWo1xQuypNFpis1ExGrSTV1WpmtmQEiaR9tRPQHFUspwI9rVk2Ajfrg1WUwFpV9ewvq/vDx9LItfeNW+9y6Ih/OcwNpJPB/UfE9afIFwdB04t89/1O/w1cDnyilFU=') # Channel Access Token DCS-BOT
@@ -83,21 +82,25 @@ def tuna():
 
 
 ########################## TinyDb #################
+@app.route('/query/<item_name>')
+def profile(item_name):
+    a = str(db.search(item.type == item_name))
+    return  a
+
 @app.route('/all_db')
 def all_db():
-    return a
+    txt = str(all_db())
+    return txt
 
 @app.route('/ins_db')
 def ins_db():
-    db.insert({'type': 'peach', 'count': 3})
+    txt = str(db.insert({'type': 'peach', 'count': 3}))
+    return txt
 
 @app.route('/del_db')
 def del_db():
-    db.purge()    
-
-@app.route('/create_db')
-def create_db():
-    db = TinyDB('db.json')
+    txt = str(db.purge())
+    return txt
 ########################## TinyDb #################    
 
 
