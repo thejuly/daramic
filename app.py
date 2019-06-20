@@ -25,7 +25,7 @@ from linebot.exceptions import LineBotApiError
 from tinydb import TinyDB, Query
 # end import module
 
-
+a = db.all()
 
 ####google sheet####
 import gspread
@@ -84,7 +84,7 @@ def tuna():
 ########################## TinyDb #################
 @app.route('/all_db')
 def all_db():
-    return db.all()
+    return a
 
 @app.route('/ins_db')
 def ins_db():
