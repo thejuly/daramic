@@ -103,7 +103,8 @@ def temp():
 
 @app.route('/query/<item_name>')
 def profile(item_name):
-    a = str(db.search(item.type == item_name))
+    #a = str(db.search(item.type == item_name))
+    a = 'a'
     return  a
 
 
