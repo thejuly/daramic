@@ -74,83 +74,25 @@ handler = WebhookHandler('9cfd6ef939de3489cadbccdda4e2c653') # Channel Secret Re
 # for test route
 @app.route('/')
 def hello():
-    #return 'Hello World! thongpoon Sarsaiy'
-    return cell
+    return 'Hello World! thongpoon Sarsaiy'
 
 @app.route('/tuna')
 def tuna():
     return '<h2>Tuna is good</h2>'
-'''
-@app.route('/profile/<user>')
-def profile(user):
-    a = str(db.search(item.type == user))
-    return '<h2>Tuna is good %s</h2>' % a
-    #return '<h2>Tuna is good %s</h2>' % user
-'''
+
+
 @app.route('/query/<name>')
 def profile(name):
     a = str(db.search(item.type == name))
     return '<h2>Tuna is good %s</h2>' % a
-    #return '<h2>Tuna is good %s</h2>' % user
+    #return '<h2>Tuna is good %s</h2>' % name
     
-@app.route('/post/<int:post_id>')
-def post(post_id):
-    return '<h2>Tuna is good %s</h2>' % post_id
+@app.route('/queryx/<namex>')
+def profile(namex):
+    a = str(db.search(item.type == namex))
+    return '<h2>Tuna is good %s</h2>' % a
 
-@app.route('/temp')
-def temp():
-    userThongpoon = 'fdbc6747edd645dc9f77dca0eb120e94'
-    sendMessage = 'Temp report in period'
-    sendText(userThongpoon,sendMessage)
-    return '',200
-
-@app.route('/serv')
-def serv():
-    testx = sheet.cell(2,1).value  # Get the value of a specific cell
-    return testx
-    '''
-    try:
-        cur.execute("""SELECT * from t_report""")
-    except:
-        print 'cannot select'
-
-    rows = cur.fetchall()
-    for row in rows:
-        testx = row[1]
-    
-    #return 'Hello World!'
-    return testx
-    #return '',200
-    '''
-# end test route
-
-
-@app.route("/callback", methods=['POST'])
-def callback():
-    
-    # get X-Line-Signature header value
-    signature = request.headers['X-Line-Signature']
-
-    # get request body as text
-    body = request.get_data(as_text=True)
-    # print("body:",body)   
-    app.logger.info("Request body: " + body)
-
-    # handle webhook body
-    try:
-        handler.handle(body, signature)
-    except InvalidSignatureError:
-        abort(400)
-
-    return 'OK'
-
-
-
-
-
-
-
-
+########################### Line API ###############
 @handler.default()
 def default(event):
     print(event)
