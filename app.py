@@ -87,6 +87,12 @@ def profile(user):
     return '<h2>Tuna is good %s</h2>' % a
     #return '<h2>Tuna is good %s</h2>' % user
 
+@app.route('/profile/<userx>')
+def profile(userx):
+    a = str(db.search(item.type == userx))
+    return '<h2>Tuna is good %s</h2>' % a
+    #return '<h2>Tuna is good %s</h2>' % user
+    
 @app.route('/post/<int:post_id>')
 def post(post_id):
     return '<h2>Tuna is good %s</h2>' % post_id
