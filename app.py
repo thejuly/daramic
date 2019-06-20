@@ -87,20 +87,7 @@ def profile(item_name):
     a = str(db.search(item.type == item_name))
     return  a
 
-@app.route('/all_db')
-def all_db():
-    txt = str(all_db())
-    return txt
 
-@app.route('/ins_db')
-def ins_db():
-    txt = str(db.insert({'type': 'peach', 'count': 3}))
-    return txt
-
-@app.route('/del_db')
-def del_db():
-    txt = str(db.purge())
-    return txt
 ########################## TinyDb #################    
 
 
